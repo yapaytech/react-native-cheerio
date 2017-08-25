@@ -2,7 +2,7 @@
   "name": "react-native-cheerio",
   "version": "0.22.0",
   "description": "Tiny, fast, and elegant implementation of core jQuery designed specifically for the server",
-  "author": "Matt Mueller <mattmuelle@gmail.com> (mat.io)",
+  "author": "leon in 't Veld' <leon3110l@gmail.com>",
   "license": "MIT",
   "keywords": [
     "htmlparser",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/cheeriojs/cheerio.git"
+    "url": "https://github.com/leon-4A6C/react-native-cheerio/"
   },
   "main": "./index.js",
   "files": [
