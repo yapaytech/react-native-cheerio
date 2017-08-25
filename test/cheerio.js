@@ -1,5 +1,5 @@
 var expect = require('expect.js'),
-    htmlparser2 = require('htmlparser2'),
+    htmlparser2 = require('htmlparser2-without-node-native'),
     $ = require('../'),
     fixtures = require('./fixtures'),
     fruits = fixtures.fruits,
