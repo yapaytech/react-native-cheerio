@@ -44,6 +44,7 @@ $.html()
 <details>
   <summary>Forms</summary>
 
+  - [.serialize()](#serialize)
   - [.serializeArray()](#serializearray)
 </details>
 <details>
@@ -198,6 +199,13 @@ $('li[class=orange]').html()
 //=> Orange
 ```
 
+##### XML Namespaces
+You can select with XML Namespaces but [due to the CSS specification](https://www.w3.org/TR/2011/REC-css3-selectors-20110929/#attribute-selectors), the colon (`:`) needs to be escaped for the selector to be valid.
+
+```js
+$('[xml\\:id="main"');
+```
+
 ### Attributes
 Methods for getting and modifying attributes.
 
@@ -323,6 +331,15 @@ $('.apple.green').toggleClass('fruit green red', true).html()
 Checks the current list of elements and returns `true` if _any_ of the elements match the selector. If using an element or Cheerio selection, returns `true` if _any_ of the elements match. If using a predicate function, the function is executed in the context of the selected element, so `this` refers to the current element.
 
 ### Forms
+
+#### .serialize()
+
+Encodes a set of form elements as a URL query string.
+
+```js
+$('<form><input name="foo" value="bar" checked /><input name="foo" value="qux" checked /></form>').serialize()
+//=> foo=bar&foo=qux
+```
 
 #### .serializeArray()
 
@@ -856,7 +873,7 @@ $('li').wrap(healthy)
 //   </ul>
 ```
 
-#### .css( [propertName] ) <br /> .css( [ propertyNames] ) <br /> .css( [propertyName], [value] ) <br /> .css( [propertName], [function] ) <br /> .css( [properties] )
+#### .css( [propertyName] ) <br /> .css( [ propertyNames] ) <br /> .css( [propertyName], [value] ) <br /> .css( [propertyName], [function] ) <br /> .css( [properties] )
 
 Get the value of a style property for the first element in the set of matched elements or set one or more CSS properties for every matched element.
 
